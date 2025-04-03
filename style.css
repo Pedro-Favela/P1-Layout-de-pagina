@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(168, 168, 168);
+
+}
+
+body{
+    background-color: black;
+}
+
+hr{
+    border: solid 1px rgb(26, 26, 26);
+}
+
+/* 
+max width 400
+height 200
+*/
+
+img{
+    object-fit: cover
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(26, 26, 26);
+    position: sticky;
+    top: 0px;
+}
+
+#brand{
+    text-align: center;
+    margin-right: 20px;
+}
+
+#navbar a{
+    margin: 10px;
+}
+
+header{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#bigAD{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    padding: 0px;
+}
+
+#bigAD-description{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#bigAD-description h4{
+    color: rgb(168, 0, 0);
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.lilAD{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    background-color: rgb(26, 26, 26);
+}
+
+.lilAD-description{
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+    text-align: justify;
+}
+
+@media (min-width: 450px){
+    html{
+        font-size: 1.2rem;
+    }
+    
+    #bigAD{
+        flex-direction: row;
+        align-items: center;
+        align-self: center;
+    }
+
+    #bigAD img{
+        width: 50%;
+        height: 500px;
+    }
+    
+    #bigAD-description{
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lilAD{
+        flex-direction: column;
+    }
+    .lilAD img{
+        width: 100%;
+        height: 200px;
+    }
+}
