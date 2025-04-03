@@ -1,4 +1,10 @@
+@font-face { 
+    font-family: MorrisRomanBlack;
+    src: url("Assets\\Fonts\\morris_roman\\MorrisRomanBlack.otf"); 
+} 
+
 *{
+    font-family: MorrisRomanBlack;
     margin: 0;
     padding: 0;
     color: rgb(168, 168, 168);
@@ -13,6 +19,21 @@ hr{
     border: solid 1px rgb(26, 26, 26);
 }
 
+a{
+    text-decoration: none;
+}
+
+.large{
+    font-size: 2rem;
+}
+
+.color-red{
+    color: rgb(168, 0, 0);
+}
+
+h4, h2, h1{
+    color: white;
+}
 /* 
 max width 400
 height 200
@@ -34,7 +55,6 @@ nav{
 
 #brand{
     text-align: center;
-    margin-right: 20px;
 }
 
 #navbar a{
@@ -54,14 +74,15 @@ header{
 }
 
 #bigAD-description{
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    width: 100%;
     padding: 5px;
+    display: grid;
+    align-content: space-between;
+    grid-template-rows: 1fr 6fr 1fr;
 }
 
-#bigAD-description h4{
-    color: rgb(168, 0, 0);
-}
+
 
 
 main{
@@ -78,43 +99,81 @@ main{
 }
 
 .lilAD-description{
+    height: 100%;
+    width: 100%;
     padding: 5px;
     display: grid;
-    grid-template-rows: 1fr 6fr 1fr;
     text-align: justify;
+    align-content: space-between;
+    grid-template-rows: 1.5fr 6fr 1fr;
 }
 
-@media (min-width: 450px){
+.lilAD-description p{
+    height: 100%;
+}
+
+
+.lilAD img{
+    width: 150px;
+    height: 100%;
+}
+
+footer{
+    background-color: rgb(26, 26, 26);
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 75px;
+    margin-top: 75px;
+}
+
+footer section{
+    display: flex;
+    text-align: justify;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+footer section p{
+    width: 50%;
+}
+
+@media (min-width: 500px){
     html{
         font-size: 1.2rem;
     }
     
     #bigAD{
         flex-direction: row;
-        align-items: center;
-        align-self: center;
     }
 
     #bigAD img{
-        width: 50%;
+        width: 75%;
         height: 500px;
     }
     
     #bigAD-description{
-        text-align: center;
-        align-items: center;
+        height: 490px;
         width: 100%;
+        padding: 5px;
+        display: grid;
+        align-content: space-between;
+        grid-template-rows: 1.5fr 6fr 0.4fr;
+        font-size: larger;
+
+    }
+
+    #bigAD-description section{
+        height: 100%;
     }
 
     main{
         grid-template-columns: 1fr 1fr;
+        
+
     }
 
     .lilAD{
-        flex-direction: column;
+        width: fit-content;
     }
-    .lilAD img{
-        width: 100%;
-        height: 200px;
-    }
+    
 }
